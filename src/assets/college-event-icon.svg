@@ -1,0 +1,100 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Modern Gradient -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="100%" style="stop-color:#764ba2"/>
+    </linearGradient>
+    
+    <!-- Calendar Gradient -->
+    <linearGradient id="calendarFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="100%" style="stop-color:#f8fafc"/>
+    </linearGradient>
+    
+    <!-- Event Symbol Gradient -->
+    <radialGradient id="eventGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#fbbf24"/>
+      <stop offset="100%" style="stop-color:#f59e0b"/>
+    </radialGradient>
+    
+    <!-- Shadow Filter -->
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#1e293b" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  
+  <!-- Main Background -->
+  <circle cx="100" cy="100" r="90" fill="url(#mainGradient)" filter="url(#dropShadow)"/>
+  
+  <!-- Calendar Icon (Main Focus) -->
+  <g transform="translate(100, 100)">
+    <!-- Calendar Body -->
+    <rect x="-35" y="-25" width="70" height="50" rx="8" fill="url(#calendarFill)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+    
+    <!-- Calendar Header -->
+    <rect x="-35" y="-25" width="70" height="16" rx="8" fill="#4f46e5"/>
+    <rect x="-35" y="-17" width="70" height="8" fill="#4f46e5"/>
+    
+    <!-- Calendar Bindings -->
+    <rect x="-25" y="-35" width="6" height="20" rx="3" fill="#64748b"/>
+    <rect x="-5" y="-35" width="6" height="20" rx="3" fill="#64748b"/>
+    <rect x="15" y="-35" width="6" height="20" rx="3" fill="#64748b"/>
+    
+    <!-- Calendar Grid -->
+    <g fill="#6366f1" font-family="system-ui, sans-serif" font-size="8" font-weight="600" text-anchor="middle">
+      <!-- Week 1 -->
+      <text x="-25" y="-2">12</text>
+      <text x="-10" y="-2">13</text>
+      <text x="5" y="-2">14</text>
+      <text x="20" y="-2">15</text>
+      
+      <!-- Week 2 -->
+      <text x="-25" y="10">19</text>
+      <text x="-10" y="10">20</text>
+      <text x="5" y="10">21</text>
+      <text x="20" y="10">22</text>
+    </g>
+    
+    <!-- Special Event Date Highlight -->
+    <circle cx="5" cy="6" r="10" fill="url(#eventGradient)" opacity="0.9"/>
+    <text x="5" y="10" fill="white" font-family="system-ui, sans-serif" font-size="8" font-weight="700" text-anchor="middle">21</text>
+  </g>
+  
+  <!-- College Cap/Graduation Symbol -->
+  <g transform="translate(70, 65)">
+    <path d="M0 0 L30 -8 L60 0 L30 8 Z" fill="#1e293b"/>
+    <rect x="25" y="-2" width="10" height="20" fill="#374151"/>
+    <circle cx="30" cy="18" r="3" fill="#fbbf24"/>
+    <path d="M30 15 Q35 18 30 21" stroke="#fbbf24" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- People/Users Icons -->
+  <g transform="translate(130, 140)">
+    <!-- Person 1 -->
+    <circle cx="0" cy="0" r="8" fill="rgba(255,255,255,0.9)"/>
+    <path d="M-8 15 Q0 8 8 15" fill="rgba(255,255,255,0.9)"/>
+    
+    <!-- Person 2 (Behind) -->
+    <circle cx="15" cy="-3" r="7" fill="rgba(255,255,255,0.7)"/>
+    <path d="M8 12 Q15 6 22 12" fill="rgba(255,255,255,0.7)"/>
+  </g>
+  
+  <!-- Event/Star Symbol -->
+  <g transform="translate(60, 140)">
+    <path d="M0,-10 L3,-3 L10,-3 L5,1 L7,8 L0,4 L-7,8 L-5,1 L-10,-3 L-3,-3 Z" fill="url(#eventGradient)"/>
+  </g>
+  
+  <!-- Modern UI Elements -->
+  <g stroke="rgba(255,255,255,0.6)" stroke-width="2" fill="none">
+    <!-- Connection Lines -->
+    <path d="M70 140 Q90 120 100 75"/>
+    <path d="M130 140 Q110 120 100 75"/>
+    <path d="M60 140 Q80 110 70 65"/>
+  </g>
+  
+  <!-- Notification Dots -->
+  <circle cx="140" cy="70" r="4" fill="#ef4444"/>
+  <circle cx="140" cy="70" r="8" fill="none" stroke="#ef4444" stroke-width="2" opacity="0.5"/>
+  
+</svg>
