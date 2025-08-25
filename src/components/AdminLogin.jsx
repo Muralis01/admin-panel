@@ -12,7 +12,7 @@ function AdminLogin() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        'http://localhost:8080/auth/admin/login',
+        'https://easyfest.onrender.com/auth/admin/login',
         { username, password },
         { headers: { 'Content-Type': 'application/json' } }
       );

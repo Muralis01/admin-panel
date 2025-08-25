@@ -32,8 +32,9 @@ function AdminDashboard() {
   const fetchEvents = async () => {
     setLoading(true);
     try {
+      console.log(error);
       const token = localStorage.getItem("token");
-      const response = await axios.get("http://localhost:8080/api/events", {
+      const response = await axios.get("https://easyfest.onrender.com/api/events", {
         headers: token ? { Authorization: `Bearer ${token}` } : {},
         params: { page: currentPage, size: eventsPerPage },
       });
@@ -79,7 +80,7 @@ function AdminDashboard() {
       return;
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:8080/api/events/${eventId}`, {
+      await axios.delete(`https://easyfest.onrender.com/api/events/${eventId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast.success("Event deleted successfully!");

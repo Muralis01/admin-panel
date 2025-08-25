@@ -19,7 +19,7 @@ function CreateAdmin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8080/auth/admins", formData, {
+      await axios.post("https://easyfest.onrender.com/auth/admins", formData, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${localStorage.getItem("token")}`,

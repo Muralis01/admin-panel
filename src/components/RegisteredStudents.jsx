@@ -24,7 +24,7 @@ const RegisteredStudents = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          `http://localhost:8080/api/events/${eventId}/registrations`,
+          `https://easyfest.onrender.com/api/events/${eventId}/registrations`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -101,7 +101,7 @@ const RegisteredStudents = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:8080/api/registrations/${registrationId}/toggle-attendance`,
+        `https://easyfest.onrender.com/api/registrations/${registrationId}/toggle-attendance`,
         {},
         {
           headers: {

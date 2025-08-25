@@ -48,7 +48,7 @@ function EditEvent() {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          `http://localhost:8080/api/events/${eventId}`,
+          `https://easyfest.onrender.com/api/events/${eventId}`,
           {
             headers: token ? { Authorization: `Bearer ${token}` } : {},
           }
@@ -93,7 +93,7 @@ function EditEvent() {
         time: to24HourFormat(formData.time), // convert back before sending
       };
 
-      await axios.put(`http://localhost:8080/api/events/${eventId}`, payload, {
+      await axios.put(`https://easyfest.onrender.com/api/events/${eventId}`, payload, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,

@@ -71,7 +71,7 @@ function CreateEvent() {
     });
 
     try {
-      await axios.post("http://localhost:8080/api/events", payload, {
+      await axios.post("https://easyfest.onrender.com/api/events", payload, {
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
